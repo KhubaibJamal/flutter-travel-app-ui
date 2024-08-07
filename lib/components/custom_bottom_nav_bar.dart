@@ -66,7 +66,7 @@ class NavItem extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: Container(
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         height: getProportionateScreenWidth(60),
         width: getProportionateScreenWidth(60),
         decoration: BoxDecoration(
@@ -81,10 +81,10 @@ class NavItem extends StatelessWidget {
               color: kTextColor,
               height: 28,
             ),
-            Spacer(),
+            const Spacer(),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.bold,
               ),

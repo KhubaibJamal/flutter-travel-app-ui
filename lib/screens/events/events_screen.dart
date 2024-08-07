@@ -10,7 +10,7 @@ class EventsScreen extends StatelessWidget {
     return Scaffold(
       appBar: buildAppBar(context, title: "New Events"),
       body: Body(),
-      bottomNavigationBar: CustomBottonNavBar(),
+      bottomNavigationBar: const CustomBottonNavBar(),
     );
   }
 }

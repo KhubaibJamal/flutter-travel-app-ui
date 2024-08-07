@@ -65,10 +65,10 @@ class UserCard extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          VerticalSpacing(of: 10),
+          const VerticalSpacing(of: 10),
           Text(
             user.name,
-            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 11),
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 11),
           ),
         ],
       ),

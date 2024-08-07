@@ -27,7 +27,7 @@ class PlaceCard extends StatelessWidget {
             aspectRatio: isFullCard ? 1.09 : 1.29,
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(20),
                 ),
@@ -44,7 +44,7 @@ class PlaceCard extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white,
               boxShadow: [kDefualtShadow],
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
               ),
@@ -62,18 +62,16 @@ class PlaceCard extends StatelessWidget {
                 if (isFullCard)
                   Text(
                     travelSport.date.day.toString(),
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline4!
-                        .copyWith(fontWeight: FontWeight.bold),
+                    // style: Theme.of(context)
+                    //     .textTheme
+                    //     .headline4!
+                    //     .copyWith(fontWeight: FontWeight.bold),
                   ),
                 if (isFullCard)
                   Text(
-                    DateFormat.MMMM().format(travelSport.date) +
-                        " " +
-                        travelSport.date.year.toString(),
+                    "${DateFormat.MMMM().format(travelSport.date)} ${travelSport.date.year}",
                   ),
-                VerticalSpacing(of: 10),
+                const VerticalSpacing(of: 10),
                 Travelers(
                   users: travelSport.users,
                 ),
@@ -117,11 +115,11 @@ class Travelers extends StatelessWidget {
             child: Container(
               height: getProportionateScreenWidth(28),
               width: getProportionateScreenWidth(28),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: kPrimaryColor,
                 shape: BoxShape.circle,
               ),
-              child: Icon(Icons.add, color: Colors.white),
+              child: const Icon(Icons.add, color: Colors.white),
             ),
           )
         ],

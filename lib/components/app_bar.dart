@@ -11,7 +11,7 @@ AppBar buildAppBar(
     backgroundColor: isTransparent ? Colors.transparent : Colors.white,
     elevation: 0,
     leading: IconButton(
-      icon: Icon(
+      icon: const Icon(
         Icons.menu,
         color: kIconColor,
       ),
@@ -20,7 +20,7 @@ AppBar buildAppBar(
     title: !isTransparent
         ? Text(
             isTransparent ? "" : title!,
-            style: TextStyle(color: kTextColor),
+            style: const TextStyle(color: kTextColor),
           )
         : null,
     centerTitle: true,
